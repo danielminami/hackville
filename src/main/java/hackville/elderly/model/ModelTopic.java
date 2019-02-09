@@ -1,6 +1,5 @@
 package hackville.elderly.model;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,7 +9,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
-@Table (name="tb_user")
+@Table (name="tb_topic")
 public class ModelTopic extends ModelAudit {
 	
 	/**
@@ -27,18 +26,8 @@ public class ModelTopic extends ModelAudit {
     private String name;
 
     @NotNull
-    @Column(unique = true)
-    @Size(max = 100)
-    private String email;
-    
-	@Size(max = 100)
-    private String location;
-	
-	@Size(max = 10)
-    private String age;
-	
-	@Size(max = 10)
-    private String gender;
+    @Size(max = 500)
+    private String description;
     
 	public Integer getId() {
 		return id;
@@ -56,38 +45,14 @@ public class ModelTopic extends ModelAudit {
 		this.name = name;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
-	public String getLocation() {
-		return location;
-	}
-
-	public void setLocation(String location) {
-		this.location = location;
-	}
-
-	public String getAge() {
-		return age;
-	}
-
-	public void setAge(String age) {
-		this.age = age;
-	}
-
-	public String getGender() {
-		return gender;
-	}
-
-	public void setGender(String gender) {
-		this.gender = gender;
-	}   
-	
 }
 
 
