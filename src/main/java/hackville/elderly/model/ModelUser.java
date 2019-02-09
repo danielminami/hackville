@@ -11,7 +11,7 @@ import javax.validation.constraints.Size;
 
 @Entity
 @Table (name="tb_user")
-public class ModelUser extends Model_Audit {
+public class ModelUser extends ModelAudit {
 	
 	/**
 	 * 

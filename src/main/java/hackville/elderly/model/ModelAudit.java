@@ -15,7 +15,7 @@ import java.util.Date;
         value = {"createdAt", "updatedAt"},
         allowGetters = true
 )
-public abstract class Model_Audit implements Serializable {
+public abstract class ModelAudit implements Serializable {
 
 	/**
 	 * 
