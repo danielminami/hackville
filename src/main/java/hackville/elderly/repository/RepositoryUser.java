@@ -9,8 +9,7 @@ import hackville.elderly.model.ModelUser;
 
 @Repository
 public interface RepositoryUser extends JpaRepository<ModelUser, Integer> {
-	
-	
+		
 	@Query(value="SELECT * "
 			+ "FROM tb_user AS u, tb_topic_usr AS t "
 			+ "WHERE u.id = t.user_id and "

@@ -48,6 +48,11 @@ public class ModelUser extends ModelAudit {
             mappedBy = "userId")
     private Set<ModelTopicUser> topic = new HashSet<>();
     
+    @OneToMany(cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY,
+            mappedBy = "userId")
+    private Set<ModelConnection> userConnection = new HashSet<>();
+    
 	public Integer getId() {
 		return id;
 	}
@@ -96,7 +101,13 @@ public class ModelUser extends ModelAudit {
 		this.topic = topic;
 	}
 
-	
+	public Set<ModelConnection> getUserConnection() {
+		return userConnection;
+	}
+
+	public void setUserConnection(Set<ModelConnection> userConnection) {
+		this.userConnection = userConnection;
+	}
 	
 }
 
