@@ -8,8 +8,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
@@ -27,15 +25,10 @@ public class ModelTopicUser extends ModelAudit {
     
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "userId", nullable = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
     @JsonIgnore
     private ModelUser userId;
     
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "topicId", nullable = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
-    private ModelTopic topicId;
+    private Integer topicId;
 
 	public Integer getId() {
 		return id;
@@ -45,7 +38,6 @@ public class ModelTopicUser extends ModelAudit {
 		this.id = id;
 	}
 
-
 	public ModelUser getUserId() {
 		return userId;
 	}
@@ -54,15 +46,13 @@ public class ModelTopicUser extends ModelAudit {
 		this.userId = userId;
 	}
 
-	public ModelTopic getTopicId() {
+	public Integer getTopicId() {
 		return topicId;
 	}
 
-	public void setTopicId(ModelTopic topicId) {
+	public void setTopicId(Integer topicId) {
 		this.topicId = topicId;
 	}
-    
-    
 	
 }
 
