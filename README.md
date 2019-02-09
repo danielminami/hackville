@@ -2,21 +2,19 @@
 
 ## BackEnd Rest Docs
 
-### List Users
-
-#### All
+#### List All Users
 
 ```
 http://localhost:8080/user/read
 ```
 
-#### By Topic
+#### List Users By Topic
 
 ```
 http://localhost:8080/user/getByTopic/{int user id}
 ```
 
-#### Create
+#### Create New User
 
 ```
 http://localhost:8080/user/create
@@ -33,4 +31,27 @@ Example:
     "gender":"M"
 }
 ```
+
+#### Creat Connection
+
+```
+http://localhost:8080/connection/create/{int user id}
+```
+
+Example:
+
+```
+{
+    "connectionId":1
+}
+
+```
+
+#### List Topics
+
+```
+http://localhost:8080/topic/read
+```
+
+
 
