@@ -5,19 +5,19 @@
 #### List All Users
 
 ```
-http://localhost:8080/user/read
+https://hackville-intertwine.herokuapp.com/user/read
 ```
 
 #### List Users By Topic
 
 ```
-http://localhost:8080/user/getByTopic/{int user id}
+https://hackville-intertwine.herokuapp.com/user/getByTopic/{int user id}
 ```
 
 #### Create New User
 
 ```
-http://localhost:8080/user/create
+https://hackville-intertwine.herokuapp.com/user/create
 ```
 
 Example:
@@ -35,7 +35,7 @@ Example:
 #### Creat Connection
 
 ```
-http://localhost:8080/connection/create/{int user id}
+https://hackville-intertwine.herokuapp.com/connection/create/{int user id}
 ```
 
 Example:
@@ -50,7 +50,7 @@ Example:
 #### List Topics
 
 ```
-http://localhost:8080/topic/read
+https://hackville-intertwine.herokuapp.com/topic/read
 ```
 
 
